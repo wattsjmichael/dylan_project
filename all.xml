@@ -1,0 +1,68 @@
+<krpano>
+	<include if="mode == 'tour'" url="default_tour.xml" />
+	<data name="floor_map" type="json"><![CDATA[
+	{
+		
+		"1": {"sort":1,"spawn":"GS__1030","angle":182,"elev":0,"stairs":{},"map":{"name":"maps/1.jpg","scale":1.00,"mm_scale":0.047,"offset_x":-4 ,"offset_y":137}}
+		
+	}
+]]>	</data>
+
+
+
+	<action name="make_sym_links" scope="local">
+
+
+
+		<!--INSIDE-->
+<!-- make_symbolic_link("GS__6034","GS__6078"); -->
+
+	</action>
+
+
+
+
+
+	<!-- Floor G -->
+	<!-- SCENES -->
+	<scene name="GS__1030" floor_id="1">
+		<preview url="panos/GS__1030.tiles/preview.jpg" />
+		<image prealign="0|272.0|0">
+			<cube url="panos/GS__1030.tiles/pano_%s.jpg" />
+		</image>
+		<!-- <hotspot name="GS__6029" style="floorspot" linkedscene="GS__6029" tx="0" tz="0" /> -->
+		<!-- <hotspot name="GS__6030" style="floorspot" linkedscene="GS__6030" tx="-23" tz="390" /> -->
+		
+
+
+
+		<hotspot name="start_tour" style="blank" fov="120" atv="4" ath="178" />
+		<hotspot name="pause_play" style="blank" fov="120" atv="4" ath="178" next="rewind"/>
+		<hotspot name="rewind" style="blank" fov="120" atv="4" ath="178" next="tour_home" />
+		<hotspot name="tour_home" style="blank" fov="120" atv="4" ath="178" next="tour_toggle" />
+		<hotspot name="tour_toggle" style="blank" fov="120" atv="4" ath="178" next="hardware_chooser"/>
+		<hotspot name="hardware_chooser" style="blank" fov="120" atv="4" ath="178" />
+		<hotspot name="desktop_intro" style="blank" fov="120" atv="4" ath="178" next="desk_zoom"/>
+		<hotspot name="desk_zoom" style="blank" fov="120" atv="4" ath="178" next="desk_hud"/>
+		<hotspot name="desk_hud" style="blank" fov="120" atv="4" ath="178" next="desk_portals"/>
+		<hotspot name="desk_portals" style="blank" fov="120" atv="4" ath="178" next="tour_intro"/>
+		<hotspot name="mobile_intro" style="blank" fov="120" atv="4" ath="178" next="mobile_zoom"/>
+		<hotspot name="mobile_zoom" style="blank" fov="120" atv="4" ath="178" next="mobile_hud"/>
+		<hotspot name="mobile_hud" style="blank" fov="120" atv="4" ath="178" next="mobile_portal"/>
+		<hotspot name="mobile_portal" style="blank" fov="120" atv="4" ath="178" next="tour_intro"/>
+		<hotspot name="tour_intro" style="blank" fov="120" atv="4" ath="178" next="tour_quick_look"/>
+		<hotspot name="tour_quick_look" style="blank" fov="120" atv="4" ath="178" next="tour_head"/>
+		<hotspot name="tour_head" style="blank" fov="120" atv="4" ath="178" next="tour_pull"/>
+	</scene>
+
+
+
+
+
+
+
+
+
+	<include url="project_data.xml" />
+
+</krpano>
